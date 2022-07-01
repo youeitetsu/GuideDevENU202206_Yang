@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="uk-UA">
+	<Group Type="String">
+		<Items>
+			<Item Name="Columns.YangName.Caption" Value="Назва" />
+			<Item Name="Columns.YangNotes.Caption" Value="Нотатки" />
+		</Items>
+	</Group>
+</Resources>

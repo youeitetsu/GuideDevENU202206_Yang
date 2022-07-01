@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="fa-IR">
+	<Group Type="String">
+		<Items>
+			<Item Name="Columns.YangName.Caption" Value="نام" />
+			<Item Name="Columns.YangNotes.Caption" Value="یادداشت ها" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "d7caf8d5-1f6d-4b2e-be45-ad0f1059532b",
+    "Name": "YangRealtyOfferTtype",
+    "ModifiedOnUtc": "\/Date(1656669172000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Realty Offer Ttype",
+    "DependsOn": []
+  }
+}

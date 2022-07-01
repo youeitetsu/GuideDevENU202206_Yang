@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Realty" />
+			<Item Name="Columns.YangAreaSqM.Caption" Value="Area,sq m" />
+			<Item Name="Columns.YangComment.Caption" Value="Comment" />
+			<Item Name="Columns.YangName.Caption" Value="Name" />
+			<Item Name="Columns.YangNotes.Caption" Value="Notes" />
+			<Item Name="Columns.YangOfferTtype.Caption" Value="Offer type" />
+			<Item Name="Columns.YangPriceUSD.Caption" Value="Price,USD" />
+			<Item Name="Columns.YangType.Caption" Value="Type" />
+		</Items>
+	</Group>
+</Resources>

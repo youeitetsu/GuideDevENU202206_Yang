@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="cs-CZ">
+	<Group Type="String">
+		<Items>
+			<Item Name="Columns.YangName.Caption" Value="Název" />
+			<Item Name="Columns.YangNotes.Caption" Value="Poznámky" />
+		</Items>
+	</Group>
+</Resources>

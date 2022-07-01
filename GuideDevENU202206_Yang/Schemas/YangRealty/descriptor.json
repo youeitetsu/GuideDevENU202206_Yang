@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "dc152942-5b36-4140-a796-7e9803be54b1",
+    "Name": "YangRealty",
+    "ModifiedOnUtc": "\/Date(1656669181000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Realty",
+    "DependsOn": []
+  }
+}
