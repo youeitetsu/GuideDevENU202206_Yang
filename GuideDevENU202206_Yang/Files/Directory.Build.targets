@@ -1,0 +1,19 @@
+<Project>
+	<ItemGroup Condition="'$(PkgPath)' != ''">
+		<Compile Remove="$(PkgPath)/GuideDevENU202206_Yang/Assemblies/**" />
+		<Compile Remove="$(PkgPath)/GuideDevENU202206_Yang/Data/**" />
+		<Compile Remove="$(PkgPath)/GuideDevENU202206_Yang/SqlScripts/**" />
+		<Compile Remove="$(PkgPath)/GuideDevENU202206_Yang/Schemas\**" />
+		<Compile Remove="$(PkgPath)/GuideDevENU202206_Yang/Resources/**" />
+		<EmbeddedResource Remove="$(PkgPath)/GuideDevENU202206_Yang/Assemblies/**" />
+		<EmbeddedResource Remove="$(PkgPath)/GuideDevENU202206_Yang/Data/**" />
+		<EmbeddedResource Remove="$(PkgPath)/GuideDevENU202206_Yang/SqlScripts/**" />
+		<EmbeddedResource Remove="$(PkgPath)/GuideDevENU202206_Yang/Schemas/**" />
+		<EmbeddedResource Remove="$(PkgPath)/GuideDevENU202206_Yang/Resources/**" />
+		<None Remove="$(PkgPath)/GuideDevENU202206_Yang/Assemblies/**" />
+		<None Remove="$(PkgPath)/GuideDevENU202206_Yang/Data/**" />
+		<None Remove="$(PkgPath)/GuideDevENU202206_Yang/SqlScripts/**" />
+		<None Remove="$(PkgPath)/GuideDevENU202206_Yang/Schemas/**" />
+		<None Remove="$(PkgPath)/GuideDevENU202206_Yang/Resources/**" />
+  </ItemGroup>
+</Project>
