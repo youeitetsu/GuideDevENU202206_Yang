@@ -1,0 +1,10 @@
+﻿{
+  "SqlScript": {
+    "UId": "02c0ad1d-9d66-3823-7c2a-644689646eb7",
+    "Name": "YangContactAgeView",
+    "DBEngineType": 0,
+    "InstallType": 1,
+    "ModifiedOnUtc": "\/Date(1656664150000)\/",
+    "DependsOn": []
+  }
+}

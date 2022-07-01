@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "f50939a6-4f6e-4e9f-af15-4b943026a030",
+    "Name": "YangVwContactAgeDays",
+    "ModifiedOnUtc": "\/Date(1656664885000)\/",
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Contact age in days",
+    "DependsOn": []
+  }
+}
