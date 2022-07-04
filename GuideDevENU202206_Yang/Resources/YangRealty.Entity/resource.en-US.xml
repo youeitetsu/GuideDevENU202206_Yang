@@ -5,9 +5,10 @@
 			<Item Name="Caption" Value="Realty" />
 			<Item Name="Columns.YangAreaSqM.Caption" Value="Area,sq m" />
 			<Item Name="Columns.YangComment.Caption" Value="Comment" />
+			<Item Name="Columns.YangManager.Caption" Value="Manager" />
 			<Item Name="Columns.YangName.Caption" Value="Name" />
 			<Item Name="Columns.YangNotes.Caption" Value="Notes" />
-			<Item Name="Columns.YangOfferTtype.Caption" Value="Offer type" />
+			<Item Name="Columns.YangOfferType.Caption" Value="Offer type" />
 			<Item Name="Columns.YangPriceUSD.Caption" Value="Price,USD" />
 			<Item Name="Columns.YangType.Caption" Value="Type" />
 		</Items>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Realty visit" />
+			<Item Name="Columns.YangComment.Caption" Value="Comment" />
+			<Item Name="Columns.YangParentRealty.Caption" Value="ParentRealty" />
+			<Item Name="Columns.YangPotentialCustomer.Caption" Value="Potential customer" />
+			<Item Name="Columns.YangVisitDatetime.Caption" Value="Visit Date/Time" />
+		</Items>
+	</Group>
+</Resources>

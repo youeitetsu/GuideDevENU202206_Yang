@@ -2,7 +2,8 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="Realty Offer Ttype" />
+			<Item Name="Caption" Value="Realty Offer Type" />
+			<Item Name="Columns.YangCommissionCoeff.Caption" Value="Commission coeff, from 0 to 1" />
 		</Items>
 	</Group>
 </Resources>
