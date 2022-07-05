@@ -23,6 +23,17 @@ define("YangRealty1Page", ["RightUtilities"], function(RightUtilities) {
 					columns:["YangCommissionCoeff"]
 				},
 			},
+			"YangManager": {
+				dataValueType: Terrasoft.DataValueType.LOOKUP,
+				lookupListConfig: {
+					filter: function() {
+						var activeUserFilter =
+							this.Terrasoft.createColumnFilterWithParameter(this.Terrasoft.ComparisonType.EQUAL,
+							"[SysAdminUnit:Contact:Id].Active", true);
+						return activeUserFilter;
+					}				
+				}
+		    },
 		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
@@ -88,7 +99,25 @@ define("YangRealty1Page", ["RightUtilities"], function(RightUtilities) {
 				}
 			}
 		}/**SCHEMA_BUSINESS_RULES*/,
+		/*publisher*/
+		messages: {
+			"MyMessageCode": {
+        		mode: Terrasoft.MessageMode.PTP,
+        		direction: Terrasoft.MessageDirectionType.PUBLISH
+		    },
+		},
 		methods: {
+			/*getMyActiveUserContactFilter: function() {
+				var activeUserFilter =
+					this.Terrasoft.createColumnFilterWithParameter(this.Terrasoft.ComparisonType.EQUAL,
+					"[SysAdminUnit:Contact:Id].Active", true);
+				return activeUserFilter;
+			},*/
+			init: function() {
+ 				this.callParent(arguments);
+				// Registering of messages
+    				this.sandbox.registerMessages(this.messages);
+			},
 			/*Validation*/
 			setValidationConfig: function() {
                 /* Call the initialization of the parent view model's validators. */
@@ -140,6 +169,16 @@ define("YangRealty1Page", ["RightUtilities"], function(RightUtilities) {
 			onMyButtonClick: function() {
 				this.showInformationDialog("My button was pressed!");
 				this.console.log("Yes, it's true. Our button was pressed.");
+				
+				var obj = {
+					value: "5dfa9e9f-8cb8-4de0-b978-41c253f4454b",
+					displayValue: "3. Parking Lot",
+				};
+				this.set("YangType", obj);
+				
+				this.console.log("Message published.");
+				var result = this.sandbox.publish("MyMessageCode", null, []);
+				this.console.log("Subscriber responed: " + result);
 			},
 			getMyButtonEnabled: function() {
 				var result = true;
