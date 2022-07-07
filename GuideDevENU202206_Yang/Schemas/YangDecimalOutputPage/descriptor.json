@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "563ddb2c-bb31-430e-90d1-ed6e2d7b35f4",
+    "Name": "YangDecimalOutputPage",
+    "ModifiedOnUtc": "\/Date(1657091251000)\/",
+    "Parent": {
+      "UId": "5826ff24-46c6-4169-9223-2aaad9ec2e18",
+      "Name": "BasePageSimpleProcessTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Decimal output page"
+  }
+}

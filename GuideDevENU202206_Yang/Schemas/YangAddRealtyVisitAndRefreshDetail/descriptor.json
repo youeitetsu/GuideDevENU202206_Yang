@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "23d8f057-5ae1-43e5-bc71-17011f145a9d",
     "Name": "YangAddRealtyVisitAndRefreshDetail",
-    "ModifiedOnUtc": "\/Date(1656992974000)\/",
+    "ModifiedOnUtc": "\/Date(1657099459000)\/",
     "ManagerName": "ProcessSchemaManager",
     "Caption": "Add realty visit and refresh detail",
     "DependsOn": []

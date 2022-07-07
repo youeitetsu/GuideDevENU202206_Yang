@@ -1,4 +1,4 @@
-define("YangRealty1Page", ["RightUtilities"], function(RightUtilities) {
+define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtilities,ServiceHelper) {
 	return {
 		entitySchemaName: "YangRealty",
 		attributes: {
@@ -112,7 +112,7 @@ define("YangRealty1Page", ["RightUtilities"], function(RightUtilities) {
 					this.Terrasoft.createColumnFilterWithParameter(this.Terrasoft.ComparisonType.EQUAL,
 					"[SysAdminUnit:Contact:Id].Active", true);
 				return activeUserFilter;
-			},*/
+			},*///inactive
 			init: function() {
  				this.callParent(arguments);
 				// Registering of messages
@@ -187,6 +187,33 @@ define("YangRealty1Page", ["RightUtilities"], function(RightUtilities) {
 					result = false;
 				}
 				return result;
+			},
+			//RunWebServiceButton
+			runWebServiceButtonClick: function(){
+				//
+				var typeObject = this.get("YangType");
+				if (!typeObject) {
+					return;
+				}
+				var typeId = typeObject.value;
+				
+				var offerTypeObject = this.get("YangOfferType");
+				if (!offerTypeObject) {
+					return;
+				}
+				var offerTypeId = offerTypeObject.value;
+				
+				var serviceData = {
+					realtyTypeId: typeId,
+					realtyOfferTypeId: offerTypeId
+				};				
+				this.console.log("1");
+				ServiceHelper.callService("RealtyService", "GetTotalAmountByTypeId", this.getWebServiceResult, serviceData, this);
+				this.console.log("2");
+			},
+			getWebServiceResult: function(response, success) {
+				this.console.log("3");
+				this.Terrasoft.showInformation("Total amount by typeId: " + response.GetTotalAmountByTypeIdResult);
 			}
 		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
@@ -266,12 +293,13 @@ define("YangRealty1Page", ["RightUtilities"], function(RightUtilities) {
 				"propertyName": "items",
 				"index": 3
 			},
+			//new button
 			{
 				"operation": "insert",
 				"name": "MyButton",
 				"values": {
 					"layout": {
-						"colSpan": 24,
+						"colSpan": 12,
 						"rowSpan": 1,
 						"column": 0,
 						"row": 4,
@@ -292,6 +320,31 @@ define("YangRealty1Page", ["RightUtilities"], function(RightUtilities) {
 				"parentName": "ProfileContainer",
 				"propertyName": "items",
 				"index": 4
+			},
+			//RunWebServiceButton
+			{
+				"operation": "insert",
+				"name": "RunWebServiceButton",
+				"values": {
+					"layout": {
+						"colSpan": 12,
+						"rowSpan": 1,
+						"column": 12,
+						"row": 4,
+						"layoutName": "ProfileContainer"
+					},
+					"itemType": 5,
+					"caption": {
+						"bindTo": "Resources.Strings.RunWebServiceButtonCaption"
+					},
+					"click": {
+						"bindTo": "runWebServiceButtonClick"
+					},
+					"style": "green"
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 5
 			},
 			{
 				"operation": "insert",
