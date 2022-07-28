@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "8e0aa2fc-4cd9-4bff-abbe-fbe20b83f2f6",
+    "Name": "YangGetRateItemSubprocess",
+    "ModifiedOnUtc": "\/Date(1658909762000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Get rate item sub process",
+    "DependsOn": []
+  }
+}

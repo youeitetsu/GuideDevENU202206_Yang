@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="https://link.idbanking.am" />
+			<Item Name="ServiceMethods.YangMethod1.Caption" Value="/api/Rate/Gold" />
+			<Item Name="ServiceMethods.YangMethod1.Response.Parameters.YangCSList.Caption" Value="CashSellList" />
+			<Item Name="ServiceMethods.YangMethod1.Response.Parameters.YangCSList.ItemProperties.YangCSLRate.Caption" Value="Rate" />
+			<Item Name="ServiceMethods.YangMethod1.Response.Parameters.YangCSList.ItemProperties.YangCSLWeight.Caption" Value="Weight" />
+		</Items>
+	</Group>
+</Resources>

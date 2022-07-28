@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "c1ca614b-914f-4d82-9773-64260070b2f3",
+    "Name": "YangGoldRateService",
+    "ModifiedOnUtc": "\/Date(1658908748000)\/",
+    "ManagerName": "ServiceSchemaManager",
+    "Caption": "https://link.idbanking.am",
+    "DependsOn": []
+  }
+}

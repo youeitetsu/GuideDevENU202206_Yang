@@ -25,7 +25,7 @@ namespace Terrasoft.Configuration
 					.Column(Func.Sum("YangPriceUSD"))
 					.From("YangRealty")
 					.Where("YangTypeId").IsEqual(Column.Parameter(new Guid(realtyTypeId)))
-					.And("YangOfferTypeId").IsEqual(Column.Parameter(new Guid(realtyOfferTypeId)))
+					.And("YangRealtyOfferTypeId").IsEqual(Column.Parameter(new Guid(realtyOfferTypeId)))
 					as Select;
 				result = select.ExecuteScalar<decimal>();
 				return result;

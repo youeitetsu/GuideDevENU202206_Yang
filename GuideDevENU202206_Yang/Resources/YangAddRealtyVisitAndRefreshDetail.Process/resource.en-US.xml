@@ -25,7 +25,9 @@
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.RecordDefValues.Value.b0bfea74-eef4-4721-a054-638ae9638882.value" Value="Auto added" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.RecordId.Caption" Value="Created record Id" />
 			<Item Name="BaseElements.ConditionalSequenceFlow2.Caption" Value="count result &gt; 0" />
+			<Item Name="BaseElements.ConditionalSequenceFlow3.Caption" Value="count &gt; 0" />
 			<Item Name="BaseElements.FormulaTask1.Caption" Value="set RealtyId" />
+			<Item Name="BaseElements.FormulaTask2.Caption" Value="dec count" />
 			<Item Name="BaseElements.ReadDataUserTask1.Caption" Value="count realty visits" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.AggregationColumnName.Caption" Value="Name of aggregate function column" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.CanReadUncommitedData.Caption" Value="Read uncommitted data" />
@@ -47,7 +49,7 @@
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultIntegerFunction.Caption" Value="Function result" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultType.Caption" Value="Type of result" />
-			<Item Name="BaseElements.ReadDataUserTask2.Caption" Value="get the previous date before  the new date" />
+			<Item Name="BaseElements.ReadDataUserTask2.Caption" Value="get the Max date" />
 			<Item Name="BaseElements.ReadDataUserTask2.Parameters.AggregationColumnName.Caption" Value="Name of aggregate function column" />
 			<Item Name="BaseElements.ReadDataUserTask2.Parameters.CanReadUncommitedData.Caption" Value="Read uncommitted data" />
 			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ConsiderTimeInFilter.Caption" Value="Consider time in the filter" />
@@ -76,9 +78,9 @@
 			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
 			<Item Name="NotificationCaption.Caption" Value="Process instance caption" />
 			<Item Name="NotificationCaption.DisplayValue" Value="[#Process name#]" />
+			<Item Name="Parameters.Count.Caption" Value="Count" />
+			<Item Name="Parameters.Count.DisplayValue" Value="5" />
 			<Item Name="Parameters.RealtyId.Caption" Value="Realty Id" />
-			<Item Name="Parameters.VisitCounter.Caption" Value="Visit counter" />
-			<Item Name="Parameters.VisitCounter.DisplayValue" Value="5" />
 		</Items>
 	</Group>
 </Resources>

@@ -1,14 +1,14 @@
 ﻿{
   "Descriptor": {
-    "UId": "d37e40e1-2df9-4bef-8ecd-a14f02b57c8c",
+    "UId": "ed217858-d77d-44ca-abfa-3760ca9b44f2",
     "Name": "YangRealtyInFolder",
-    "ModifiedOnUtc": "\/Date(1656668232000)\/",
+    "ModifiedOnUtc": "\/Date(1658798667000)\/",
     "Parent": {
       "UId": "4f63bafb-e9e7-4082-b92e-66b97c14017c",
       "Name": "BaseItemInFolder"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Realty in Folder",
+    "Caption": "Realty in folder",
     "DependsOn": []
   }
 }

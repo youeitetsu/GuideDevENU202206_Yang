@@ -52,32 +52,6 @@
   "S2": "5cc8060d-6d10-4773-89fc-8c12d6f659a6"
 }
 + MetaData.Schema.D2 {
-  "UId": "4c691a36-390c-4cf0-8e35-e1cef5a74469",
-  "A2": "YangType",
-  "A3": "dc152942-5b36-4140-a796-7e9803be54b1",
-  "A4": "dc152942-5b36-4140-a796-7e9803be54b1",
-  "A5": "31a6737b-7268-45d1-bcfb-c57678242788",
-  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
-  "S4": "446367e7-5a46-45bf-a8a9-2ec1a36fa71a",
-  "E6": true,
-  "E20": true,
-  "E17": "YangTypeId",
-  "E18": "YangTypeName"
-}
-+ MetaData.Schema.D2 {
-  "UId": "d1cd4ced-0c67-4f9e-bea0-158ab2ed0852",
-  "A2": "YangOfferType",
-  "A3": "dc152942-5b36-4140-a796-7e9803be54b1",
-  "A4": "dc152942-5b36-4140-a796-7e9803be54b1",
-  "A5": "31a6737b-7268-45d1-bcfb-c57678242788",
-  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
-  "S4": "d7caf8d5-1f6d-4b2e-be45-ad0f1059532b",
-  "E6": true,
-  "E20": true,
-  "E17": "YangOfferTypeId",
-  "E18": "YangOfferTypeName"
-}
-+ MetaData.Schema.D2 {
   "UId": "48ec50ff-a9dd-4ef2-8283-49407e7525cf",
   "A2": "YangComment",
   "A3": "dc152942-5b36-4140-a796-7e9803be54b1",
@@ -97,7 +71,32 @@
   "E17": "YangManagerId",
   "E18": "YangManagerName"
 }
-~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","33238035-0f18-4da5-ae84-2fc806590613","08a93730-7f5f-49b1-b2f0-f7ed67598f15","9ce80b86-2987-445c-a424-e217bde1c978","c874faf0-ce74-42df-9d7c-425ff2576963","4c691a36-390c-4cf0-8e35-e1cef5a74469","d1cd4ced-0c67-4f9e-bea0-158ab2ed0852","48ec50ff-a9dd-4ef2-8283-49407e7525cf","7e5b520b-b378-4afc-a59c-15f56e6205c4"]
++ MetaData.Schema.D2 {
+  "UId": "98b6a4b4-7952-4d0b-9b4d-dc6a9c312361",
+  "A2": "YangType",
+  "A3": "dc152942-5b36-4140-a796-7e9803be54b1",
+  "A4": "dc152942-5b36-4140-a796-7e9803be54b1",
+  "A5": "31a6737b-7268-45d1-bcfb-c57678242788",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "446367e7-5a46-45bf-a8a9-2ec1a36fa71a",
+  "E6": true,
+  "E20": true,
+  "E17": "YangTypeId",
+  "E18": "YangTypeName"
+}
++ MetaData.Schema.D2 {
+  "UId": "0ea58b07-71aa-eab4-038c-3721dfb5d9c3",
+  "A2": "YangRealtyOfferType",
+  "A3": "dc152942-5b36-4140-a796-7e9803be54b1",
+  "A4": "dc152942-5b36-4140-a796-7e9803be54b1",
+  "A5": "31a6737b-7268-45d1-bcfb-c57678242788",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "d7caf8d5-1f6d-4b2e-be45-ad0f1059532b",
+  "E6": true,
+  "E17": "YangRealtyOfferTypeId",
+  "E18": "YangRealtyOfferTypeName"
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","33238035-0f18-4da5-ae84-2fc806590613","08a93730-7f5f-49b1-b2f0-f7ed67598f15","9ce80b86-2987-445c-a424-e217bde1c978","c874faf0-ce74-42df-9d7c-425ff2576963","48ec50ff-a9dd-4ef2-8283-49407e7525cf","7e5b520b-b378-4afc-a59c-15f56e6205c4","98b6a4b4-7952-4d0b-9b4d-dc6a9c312361","0ea58b07-71aa-eab4-038c-3721dfb5d9c3"]
 = MetaData.Schema.D20.A2 "YangRealtyEvents"
 - MetaData.Schema.EG1.B6
 - MetaData.Schema.EG1.BK29

@@ -2,7 +2,7 @@
   "Properties": {
     "AdministratedByColumns": "False",
     "AdministratedByOperations": "False",
-    "AdministratedByRecords": "True",
+    "AdministratedByRecords": "False",
     "CreatedInVersion": "8.0.2.2446",
     "IsSSPAvailable": "False",
     "IsTrackChangesInDB": "False",

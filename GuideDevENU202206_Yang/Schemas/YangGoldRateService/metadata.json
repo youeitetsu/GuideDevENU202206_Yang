@@ -1,0 +1,80 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ServiceSchemaManager",
+      "UId": "c1ca614b-914f-4d82-9773-64260070b2f3",
+      "A2": "YangGoldRateService",
+      "A5": "31a6737b-7268-45d1-bcfb-c57678242788",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "a9e30625-be24-b9cc-41b9-f0230da19917",
+      "B8": "8.0.2.2446",
+      "IQ1": "https://link.idbanking.am",
+      "IQ2": 1,
+      "IQ7": [],
+      "IQ4": [
+        {
+          "UId": "1d05b8c5-b575-4f54-9d39-43323ca581aa",
+          "A2": "YangMethod1",
+          "A3": "c1ca614b-914f-4d82-9773-64260070b2f3",
+          "A4": "c1ca614b-914f-4d82-9773-64260070b2f3",
+          "IR3": 5000,
+          "IR5": "null",
+          "IR1": {
+            "IW2": 1,
+            "IW1": [],
+            "IT2": 1,
+            "IT1": "/api/Rate/Gold"
+          },
+          "IR2": {
+            "IW2": 1,
+            "IW1": [
+              {
+                "UId": "46c172db-2010-4694-9fc4-ab268055b2e9",
+                "A2": "YangCSList",
+                "IU1": "$.cashSellList",
+                "IU2": "Object",
+                "IU3": true,
+                "IU8": "item",
+                "IU4": 1,
+                "IU5": {
+                  "IV1": "null"
+                },
+                "IU6": [
+                  {
+                    "UId": "a5ca30a3-47d9-4362-978d-5c85a8843544",
+                    "A2": "YangCSLWeight",
+                    "IU1": "weight",
+                    "IU2": "Integer",
+                    "IU8": "item",
+                    "IU4": 1,
+                    "IU5": {
+                      "IV1": "null"
+                    },
+                    "IU6": []
+                  },
+                  {
+                    "UId": "b814f2ae-9ad3-4b83-981c-9c5673675e3c",
+                    "A2": "YangCSLRate",
+                    "IU1": "rate",
+                    "IU2": "Text",
+                    "IU8": "item",
+                    "IU4": 1,
+                    "IU5": {
+                      "IV1": "null"
+                    },
+                    "IU6": []
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "IQ5": {
+        "IY1": 3
+      }
+    }
+  }
+}

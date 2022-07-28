@@ -13,12 +13,12 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 				"value": 0.00,
 				dependencies: [
                     {
-                        columns: ["YangPriceUSD", "YangOfferType"],
+                        columns: ["YangPriceUSD", "YangRealtyOfferType"],
                         methodName: "calculateCommission"
                     }
                 ]
 			},
-			"YangOfferType":{
+			"YangRealtyOfferType":{
 				lookupListConfig:{
 					columns:["YangCommissionCoeff"]
 				},
@@ -37,19 +37,19 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
-			"Files": {
-				"schemaName": "FileDetailV2",
-				"entitySchemaName": "YangRealtyFile",
-				"filter": {
-					"masterColumn": "Id",
-					"detailColumn": "YangRealty"
-				}
-			},
 			"YangSchema26b8cca2Detailac7c0d7b": {
 				"schemaName": "YangRealtyVisitDetail",
 				"entitySchemaName": "YangRealtyVisit",
 				"filter": {
 					"detailColumn": "YangParentRealty",
+					"masterColumn": "Id"
+				}
+			},
+			"FileDetailV28c83c957": {
+				"schemaName": "FileDetailV2",
+				"entitySchemaName": "YangRealtyFile",
+				"filter": {
+					"detailColumn": "YangRealty",
 					"masterColumn": "Id"
 				}
 			}
@@ -68,7 +68,7 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 							"comparisonType": 2,
 							"leftExpression": {
 								"type": 1,
-								"attribute": "YangOfferType"
+								"attribute": "YangRealtyOfferType"
 							}
 						}
 					]
@@ -146,7 +146,7 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 				if (!price) {
 					price = 0;
 				}
-				var offerTypeObject = this.get("YangOfferType");
+				var offerTypeObject = this.get("YangRealtyOfferType");
 				var coeff = 0;
 				if (offerTypeObject) {
 					coeff = offerTypeObject.YangCommissionCoeff;
@@ -190,14 +190,14 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 			},
 			//RunWebServiceButton
 			runWebServiceButtonClick: function(){
-				//
+				// check null value
 				var typeObject = this.get("YangType");
 				if (!typeObject) {
 					return;
 				}
 				var typeId = typeObject.value;
 				
-				var offerTypeObject = this.get("YangOfferType");
+				var offerTypeObject = this.get("YangRealtyOfferType");
 				if (!offerTypeObject) {
 					return;
 				}
@@ -214,7 +214,81 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 			getWebServiceResult: function(response, success) {
 				this.console.log("3");
 				this.Terrasoft.showInformation("Total amount by typeId: " + response.GetTotalAmountByTypeIdResult);
-			}
+			},
+			/** asyncValidate **/
+			asyncValidate: function(callback, scope) {
+				this.callParent([
+						function(response) {
+					if (!this.validateResponse(response)) {
+						return;
+					}
+					this.validateRealtyData(function(response) {
+						if (!this.validateResponse(response)) {
+							return;
+						}
+						callback.call(scope, response);
+					}, this);
+				}, this]);
+			},
+			validateRealtyData: function(callback, scope) {
+				// create query for server side
+				var esq = this.Ext.create("Terrasoft.EntitySchemaQuery", {
+					rootSchemaName: "YangRealty"
+				});
+				esq.addAggregationSchemaColumn("YangPriceUSD", Terrasoft.AggregationType.SUM, "PriceSum");
+				// get values
+				var typeObject = this.get("YangType");
+				if (!typeObject) {
+					return;
+				}
+				var typeId = typeObject.value;
+				
+				var offerTypeObject = this.get("YangRealtyOfferType");
+				if (!offerTypeObject) {
+					return;
+				}
+				var offerTypeId = offerTypeObject.value;
+				var id = this.get("Id");
+				
+				// set filters
+				var typeFilter = esq.createColumnFilterWithParameter(this.Terrasoft.ComparisonType.EQUAL,"YangType", typeId);
+				var offerTypeFilter = esq.createColumnFilterWithParameter(this.Terrasoft.ComparisonType.EQUAL,"YangRealtyOfferType", offerTypeId);
+				esq.filters.addItem(typeFilter);
+				esq.filters.addItem(offerTypeFilter);
+				if (id) {
+					esq.filters.addItem(this.Terrasoft.createColumnFilterWithParameter(this.Terrasoft.ComparisonType.NOT_EQUAL, "Id", id));
+				}
+				
+				// run query
+				esq.getEntityCollection(function(response) {
+					if (response.success && response.collection) {
+						var sum = 0;
+						var items = response.collection.getItems();
+						if (items.length > 0) {
+							sum = items[0].get("PriceSum");
+						}
+						var price = this.get("YangPriceUSD");
+						if (!price) {
+							price = 0;
+						}
+						sum = sum + price;
+						var max = 500000;
+						if (sum > max) {
+							if (callback) {
+								callback.call(this, {
+									success: false,
+									message: "You cannot save, because sum = " + sum + " is bigger than " + max
+								});
+							}
+						} else if (callback) {
+							callback.call(scope, {
+								success: true
+							});
+						}
+					}
+				}, this);
+			},
+			/** async */
 		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
@@ -293,7 +367,6 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 				"propertyName": "items",
 				"index": 3
 			},
-			//new button
 			{
 				"operation": "insert",
 				"name": "MyButton",
@@ -321,7 +394,6 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 				"propertyName": "items",
 				"index": 4
 			},
-			//RunWebServiceButton
 			{
 				"operation": "insert",
 				"name": "RunWebServiceButton",
@@ -348,7 +420,7 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 			},
 			{
 				"operation": "insert",
-				"name": "LOOKUP902ff0fc-91be-4f9a-b99c-9a8274d7425f",
+				"name": "YangType04e8a264-982e-48c3-a716-fa78ccc6850a",
 				"values": {
 					"layout": {
 						"colSpan": 12,
@@ -357,9 +429,7 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 						"row": 0,
 						"layoutName": "Header"
 					},
-					"bindTo": "YangType",
-					"enabled": true,
-					"contentType": 3
+					"bindTo": "YangType"
 				},
 				"parentName": "Header",
 				"propertyName": "items",
@@ -367,7 +437,7 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 			},
 			{
 				"operation": "insert",
-				"name": "LOOKUPc7ce0dd4-8680-4611-9696-a07a8d8bbebb",
+				"name": "YangRealtyOfferType322ae5a9-60e8-4c8a-895e-bc825a0e281a",
 				"values": {
 					"layout": {
 						"colSpan": 12,
@@ -376,9 +446,9 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 						"row": 0,
 						"layoutName": "Header"
 					},
-					"bindTo": "YangOfferType",
+					"bindTo": "YangRealtyOfferType",
 					"enabled": true,
-					"contentType": 3
+					"contentType": 5
 				},
 				"parentName": "Header",
 				"propertyName": "items",
@@ -463,9 +533,10 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 			},
 			{
 				"operation": "insert",
-				"name": "Files",
+				"name": "FileDetailV28c83c957",
 				"values": {
-					"itemType": 2
+					"itemType": 2,
+					"markerValue": "added-detail"
 				},
 				"parentName": "NotesAndFilesTab",
 				"propertyName": "items",

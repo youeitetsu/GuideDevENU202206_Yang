@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "e25828ce-2fa7-4b62-a238-6c78e954daa6",
+    "Name": "YangGetGoldRates",
+    "ModifiedOnUtc": "\/Date(1658910158000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Get Gold Rates",
+    "DependsOn": []
+  }
+}

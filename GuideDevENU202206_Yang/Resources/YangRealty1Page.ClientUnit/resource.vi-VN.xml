@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Edit page: &quot;Realty&quot;" />
+			<Item Name="LocalizableStrings.FileDetailV28c83c957DetailCaptionOnPage.Value" Value="Các đính kèm" />
 		</Items>
 	</Group>
 </Resources>

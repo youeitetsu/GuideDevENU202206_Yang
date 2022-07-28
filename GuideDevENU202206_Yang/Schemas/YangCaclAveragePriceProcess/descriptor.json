@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "577ffe85-1960-46be-812d-3ce62903f734",
+    "Name": "YangCaclAveragePriceProcess",
+    "ModifiedOnUtc": "\/Date(1658888533000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Cacl average price process",
+    "DependsOn": []
+  }
+}

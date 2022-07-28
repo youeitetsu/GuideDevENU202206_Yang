@@ -27,10 +27,12 @@
 = MetaData.Schema.D2.["b48bfc16-bdfd-4658-b339-1f02b5a7f342"].S4 "b0213c12-d8dc-4c52-ad96-97032e70b387"
 = MetaData.Schema.D2.["a3eb8e36-6d55-4d8d-9c14-102bc79fe48a"].S4 "dc152942-5b36-4140-a796-7e9803be54b1"
 = MetaData.Schema.D2.["a3eb8e36-6d55-4d8d-9c14-102bc79fe48a"].E18 "EntityYangName"
+= MetaData.Schema.D20.A2 "YangRealtyInTagEvents"
 - MetaData.Schema.EG1.BK29
 - MetaData.Schema.EG1.BK30
 - MetaData.Schema.D1
-- MetaData.Schema.D20
+- MetaData.Schema.D20.FA4
+- MetaData.Schema.D20.FA15
 - MetaData.Schema.B7
 + MetaData.Schema.B7 false
 + MetaData.Schema.D2.["ae0e45ca-c495-4fe7-a39d-3ab7278e1617"].E16 false

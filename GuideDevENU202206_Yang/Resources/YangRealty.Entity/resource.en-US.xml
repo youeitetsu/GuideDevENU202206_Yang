@@ -8,8 +8,8 @@
 			<Item Name="Columns.YangManager.Caption" Value="Manager" />
 			<Item Name="Columns.YangName.Caption" Value="Name" />
 			<Item Name="Columns.YangNotes.Caption" Value="Notes" />
-			<Item Name="Columns.YangOfferType.Caption" Value="Offer type" />
 			<Item Name="Columns.YangPriceUSD.Caption" Value="Price,USD" />
+			<Item Name="Columns.YangRealtyOfferType.Caption" Value="Offer Type" />
 			<Item Name="Columns.YangType.Caption" Value="Type" />
 		</Items>
 	</Group>
