@@ -79,6 +79,7 @@
   "A5": "31a6737b-7268-45d1-bcfb-c57678242788",
   "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
   "S4": "446367e7-5a46-45bf-a8a9-2ec1a36fa71a",
+  "E2": 1,
   "E6": true,
   "E20": true,
   "E17": "YangTypeId",
@@ -92,7 +93,9 @@
   "A5": "31a6737b-7268-45d1-bcfb-c57678242788",
   "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
   "S4": "d7caf8d5-1f6d-4b2e-be45-ad0f1059532b",
+  "E2": 1,
   "E6": true,
+  "E20": true,
   "E17": "YangRealtyOfferTypeId",
   "E18": "YangRealtyOfferTypeName"
 }

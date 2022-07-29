@@ -47,6 +47,22 @@
           "Value": "\/Date(1656660046183+0900)\/"
         }
       ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "b46eac00-d793-43bd-adfe-12a2a6deeb0f"
+        },
+        {
+          "SchemaColumnUId": "b8b285c2-2eab-96d2-31c8-5497c326dcf6",
+          "Value": "L"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1659061863812+0900)\/"
+        }
+      ]
     }
   ]
 }

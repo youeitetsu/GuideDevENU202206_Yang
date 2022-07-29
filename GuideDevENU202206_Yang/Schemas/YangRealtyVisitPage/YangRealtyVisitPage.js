@@ -4,7 +4,23 @@ define("YangRealtyVisitPage", [], function() {
 		attributes: {},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
-		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
+		businessRules: /**SCHEMA_BUSINESS_RULES*/{
+			"YangOwner": {
+				"e07af3a7-b649-4c1e-a431-6fef5c5fd5d1": {
+					"uId": "e07af3a7-b649-4c1e-a431-6fef5c5fd5d1",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 1,
+					"baseAttributePatch": "Account.Type",
+					"comparisonType": 3,
+					"autoClean": false,
+					"autocomplete": false,
+					"type": 0,
+					"value": "57412fad-53e6-df11-971b-001d60e938c6",
+					"dataValueType": 10
+				}
+			}
+		}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
@@ -47,13 +63,32 @@ define("YangRealtyVisitPage", [], function() {
 			},
 			{
 				"operation": "insert",
+				"name": "LOOKUP8270656d-8979-45d9-a2b1-1020248c1bb0",
+				"values": {
+					"layout": {
+						"colSpan": 12,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 1,
+						"layoutName": "Header"
+					},
+					"bindTo": "YangOwner",
+					"enabled": true,
+					"contentType": 5
+				},
+				"parentName": "Header",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
 				"name": "STRINGeeb9e060-5717-4b35-9023-e4443add8539",
 				"values": {
 					"layout": {
 						"colSpan": 24,
 						"rowSpan": 1,
 						"column": 0,
-						"row": 1,
+						"row": 2,
 						"layoutName": "Header"
 					},
 					"bindTo": "YangComment",
@@ -62,7 +97,7 @@ define("YangRealtyVisitPage", [], function() {
 				},
 				"parentName": "Header",
 				"propertyName": "items",
-				"index": 2
+				"index": 3
 			}
 		]/**SCHEMA_DIFF*/
 	};

@@ -72,6 +72,28 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 							}
 						}
 					]
+				},
+				"3d8ec4fc-d7cf-4559-9b68-17ec545846f1": {
+					"uId": "3d8ec4fc-d7cf-4559-9b68-17ec545846f1",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 0,
+					"property": 2,
+					"logical": 0,
+					"conditions": [
+						{
+							"comparisonType": 5,
+							"leftExpression": {
+								"type": 0,
+								"value": 100000,
+								"dataValueType": 4
+							},
+							"rightExpression": {
+								"type": 1,
+								"attribute": "YangPriceUSD"
+							}
+						}
+					]
 				}
 			},
 			"YangManager": {
@@ -416,7 +438,7 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 				},
 				"parentName": "ProfileContainer",
 				"propertyName": "items",
-				"index": 5
+				"index": 4
 			},
 			{
 				"operation": "insert",
@@ -429,7 +451,9 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 						"row": 0,
 						"layoutName": "Header"
 					},
-					"bindTo": "YangType"
+					"bindTo": "YangType",
+					"enabled": true,
+					"contentType": 3
 				},
 				"parentName": "Header",
 				"propertyName": "items",
@@ -448,7 +472,7 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 					},
 					"bindTo": "YangRealtyOfferType",
 					"enabled": true,
-					"contentType": 5
+					"contentType": 3
 				},
 				"parentName": "Header",
 				"propertyName": "items",
