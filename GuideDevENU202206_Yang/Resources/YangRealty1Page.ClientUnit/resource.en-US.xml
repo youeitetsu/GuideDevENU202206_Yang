@@ -5,6 +5,7 @@
 			<Item Name="Caption" Value="Edit page: &quot;Realty&quot;" />
 			<Item Name="LocalizableStrings.CommissionCaption.Value" Value="Commission, USD" />
 			<Item Name="LocalizableStrings.FileDetailV28c83c957DetailCaptionOnPage.Value" Value="Attachments" />
+			<Item Name="LocalizableStrings.getTotalMessage.Value" Value="Total already more than 500,000" />
 			<Item Name="LocalizableStrings.MyButtonCaption.Value" Value="PUSH ME!" />
 			<Item Name="LocalizableStrings.RunWebServiceButtonCaption.Value" Value="Run Service" />
 			<Item Name="LocalizableStrings.Tabfb5c0b2dTabLabelTabCaption.Value" Value="Visits" />

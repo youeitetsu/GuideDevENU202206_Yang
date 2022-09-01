@@ -138,7 +138,7 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 			init: function() {
  				this.callParent(arguments);
 				// Registering of messages
-    				this.sandbox.registerMessages(this.messages);
+    			this.sandbox.registerMessages(this.messages);
 			},
 			/*Validation*/
 			setValidationConfig: function() {
@@ -237,6 +237,7 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 				this.console.log("3");
 				this.Terrasoft.showInformation("Total amount by typeId: " + response.GetTotalAmountByTypeIdResult);
 			},
+			
 			/** asyncValidate **/
 			asyncValidate: function(callback, scope) {
 				this.callParent([
@@ -300,8 +301,9 @@ define("YangRealty1Page", ["RightUtilities","ServiceHelper"], function(RightUtil
 								callback.call(this, {
 									success: false,
 									message: "You cannot save, because sum = " + sum + " is bigger than " + max
-								});
+								});	
 							}
+							this.showInformationDialog("Data query error");
 						} else if (callback) {
 							callback.call(scope, {
 								success: true
